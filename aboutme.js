@@ -1,5 +1,5 @@
 
-alert("Welcome to my page!");
+// alert("Welcome to my page!");
 imgID = 0;
 
 function bigImg(x) {
@@ -24,7 +24,7 @@ function showHideSection(section){
 }
 
 function nextImg(){
-  img = document.getElementById("update-penguins");
+  var img = document.getElementById("update-penguins");
 	if (imgID == 0) {
     img.innerHTML = '<h2>Robo Penguin</h2><p>This penguin has wheels and synthetic (but still cuddly) fluff</p><img src="https://images2.sw-cdn.net/product/picture/710x528_6211899_2832503_1459312498.jpg" height=400px alt="Robo Penguin">';
 	} else if (imgID == 1) {
@@ -35,4 +35,14 @@ function nextImg(){
     img.innerHTML = '<h2>Pingu</h2><p>NOOT NOOT</p><img  src="https://vignette.wikia.nocookie.net/p__/images/c/cc/Pingu_1.png/revision/latest?cb=20130826005309&path-prefix=protagonist" height=400px alt="Pingu">';
   }
   imgID = (imgID+1)%4;
+}
+
+function button_glow(button){
+  var x = document.getElementById(button);
+  x.style.color = "blue";
+}
+
+function button_unglow(button){
+  var x = document.getElementById(button);
+  x.style.color = "lightseagreen";
 }

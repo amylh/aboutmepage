@@ -3,14 +3,15 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Nunito:300,700' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="aboutme.js"></script>
   <title>About Me</title>
 </head>
 <body>
   <div id="header">
     <img id="profile-pic" src="https://img.clipartxtras.com/7eb14e59b72c0ca4deda1f4f5ae66c43_671-vind-ik-leuks-12-reacties-naomi-lord-naomi-lord-op-chibi-penguin-drawing_1080-1080.jpeg" alt="chibi penguin drawing" /> Pinga
     <span id="navigation">
-      <a href="contact.html">Contact</a>
-      <a href="index.html">Home</a>
+      <a href="contact.html" id='contact-button' onmouseover="button_glow('contact-button')" onmouseout="button_unglow('contact-button')">Contact</a>
+      <a href="index.html" id='home-button' onmouseover="button_glow('home-button')" onmouseout="button_unglow('home-button')">Home</a>
     </span>
   </div>
 
