@@ -6,19 +6,24 @@ body {
   min-width: 600px;
 }
 
-h1 {
-  color: lightseagreen;
-  font-size: 36px;
-  font-family: 'Poiret One';
-  font-weight: bold;
-}
-
-p, li {
+body p, li {
   font-size: 20px;
 }
 
 a {
+  color: seagreen;
+  text-decoration: none;
+}
+
+h1 {
   color: lightseagreen;
+  background-color: #eafaf1;
+  font-size: 36px;
+  font-family: 'Poiret One';
+  font-weight: bold;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Applies to name banner in header */
@@ -28,7 +33,6 @@ a {
   padding: 20px;
   font-size: 80px;
   font-weight: bold;
-  min-width: 600px;
   text-align: center;
   font-family: 'Poiret One';
 }
@@ -36,40 +40,63 @@ a {
 /* Applies to the entire navigation bar */
 #navigation {
   text-align: center;
-  padding: 20px;
-  font-size: 30px;
+  margin-left: 120px;
+  margin-right: 120px;
+  font-size: 20px;
   font-family: 'Poiret One';
-  min-width: 600px;
+  background-color: #eafaf1;
 }
 
 /* Applies to individual <a> elements in the navigation bar */
 #navigation a:link {
-    background-color:  #eafaf1 ;
     color: lightseagreen;
-    padding: 14px 25px;
+    /* top right bottom left */
+    padding: 5px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
 }
 #navigation a:hover, a:active {
-    background-color: #a9dfbf ;
+    background-color: #a9dfbf;
     text-decoration: none;
     color: white;
     display: inline-block;
 }
 
-
-#bio {
-  border-bottom: 1px solid palegreen;
+#footer {
+    background-color: palegreen;
+    text-align: center;
+}
+#footer p {
+    margin: 40px 120px 10px 120px;
+    text-align: center;
 }
 
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+#featured_projs {
+  text-align: center;
 }
 
 .content {
   /* top right bottom left*/
   margin: 10px 120px 10px 120px;
+}
+
+.tile_blurb {
+  background-color: white;
+  display: inline-block;
+  border: 2px solid palegreen;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+}
+.tile_blurb img {
+  width: 200px;
+}
+.tile_blurb p {
+  font-size: 15px;
+}
+.tile_blurb:hover {
+  transform: scale(1.1);
+  transition: transform .2s
 }
