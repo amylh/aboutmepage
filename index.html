@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<!-- Sources used: https://github.com/GirlsFirst/SIP-2018/tree/master/U2-Applications/U2.2-Web-Development/JavaScriptAndAccessibility -->
 <head>
   <!-- Get fonts and CSS -->
-  <link href='https://fonts.googleapis.com/css?family=Nunito:300,700' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
   <link rel="stylesheet" type="text/css" href="style.css">
   <!-- Get JavaScript -->
   <script src="aboutme.js"></script>
+  <script src="include.js"></script>
   <!-- Window title -->
-  <title>About Me</title>
+  <title>GammaLaser</title>
 </head>
 <body>
-  <div id="header">
-    <!-- Penguin image -->
-    <a id="profile-pic" href="https://clipartxtras.com/download/8223b2688156ef637d6b7671095c52012cdb020c.html" title="Image from clipartxtras.com" ><img id="profile-pic"  src="https://img.clipartxtras.com/7eb14e59b72c0ca4deda1f4f5ae66c43_671-vind-ik-leuks-12-reacties-naomi-lord-naomi-lord-op-chibi-penguin-drawing_1080-1080.jpeg" alt="chibi penguin drawing"/></a> Pinga
-
-    <!-- Navigation menu -->
-    <span id="navigation">
-      <a href="contact.html" id='contact-button' onmouseover="button_glow('contact-button')" onmouseout="button_unglow('contact-button')">Contact</a>
-      <a href="index.html" id='home-button' onmouseover="button_glow('home-button')" onmouseout="button_unglow('home-button')">Home</a>
-    </span>
-  </div>
+  <div w3-include-html="header.html"></div>
 
   <div class="content">
     <h1>Bio:</h1> <button id="show/hide-Bio" onclick="showHideSection('Bio')">Hide Bio</button>
@@ -57,5 +50,7 @@
     </div>
 
   </div>
+
+  <script>includeHTML();</script>
 </body>
 </html>

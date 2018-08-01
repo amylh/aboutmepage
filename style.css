@@ -1,8 +1,8 @@
 
 body {
-  background-color: mintcream;
-  color: teal;
-  font-family: 'Nunito', sans-serif;
+  background-color: white;
+  color: lightseagreen;
+  font-family: 'Raleway', sans-serif;
   margin: 10px 20px 10px 20px;
   min-width: 600px;
 }
@@ -10,6 +10,8 @@ body {
 h1 {
   color: lightseagreen;
   font-size: 36px;
+  font-family: 'Poiret One';
+  font-weight: bold;
 }
 
 p, li {
@@ -20,29 +22,45 @@ a {
   color: lightseagreen;
 }
 
+/* Applies to name banner in header */
 #header {
-  border: 2px solid teal;
+  border: 2px solid palegreen;
   padding: 20px;
-  font-size: 50px;
+  font-size: 100px;
   font-weight: bold;
   min-width: 600px;
+  text-align: center;
+  font-family: 'Josefin Slab';
 }
 
-#navigation a {
-  float: right;
+/* Applies to the entire navigation bar */
+#navigation {
   text-align: center;
   padding: 20px;
   font-size: 30px;
-  text-decoration: none;
+  font-family: 'Poiret One';
+  min-width: 600px;
 }
 
-#profile-pic {
-  height: 70px;
-  vertical-align: middle;
+/* Applies to individual <a> elements in the navigation bar */
+#navigation a:link {
+    background-color:  #eafaf1 ;
+    color: lightseagreen;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
+#navigation a:hover, a:active {
+    background-color: #a9dfbf ;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
 
 #bio {
-  border-bottom: 1px solid teal;
+  border-bottom: 1px solid palegreen;
 }
 
 .center {
