@@ -36,15 +36,3 @@ function nextImg(){
   }
   imgID = (imgID+1)%4;
 }
-
-/* Make a button change color when mouse hovers over it */
-function button_glow(button){
-  var x = document.getElementById(button);
-  x.style.color = "blue";
-}
-
-/* Make button return to original color when mouse moves away */
-function button_unglow(button){
-  var x = document.getElementById(button);
-  x.style.color = "lightseagreen";
-}
