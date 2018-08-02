@@ -64,11 +64,12 @@ h1 {
 }
 
 #footer {
-    background-color: palegreen;
+    background-color: #eafaf1;
     text-align: center;
+    margin: 40px 120px 10px 120px;
 }
 #footer p {
-    margin: 40px 120px 10px 120px;
+    margin: 50px 120px 0px 120px;
     text-align: center;
 }
 
@@ -85,8 +86,11 @@ h1 {
   background-color: white;
   display: inline-block;
   border: 2px solid palegreen;
+  border-radius: 5px;
   width: 200px;
-  padding: 5px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   text-align: center;
   vertical-align: top;
 }
