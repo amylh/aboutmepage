@@ -1,2 +1,2 @@
 # aboutmepage
-A sample webpage.
+A sample webpage. Will eventually become my personal website.
