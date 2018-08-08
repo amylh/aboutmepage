@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- Sources Used: https://github.com/toperkin/staticFormEmails -->
+
   <!-- Get fonts and CSS -->
   <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Josefin Slab' rel='stylesheet'>
@@ -9,6 +11,11 @@
   <!-- Get JavaScript -->
   <script src="aboutme.js"></script>
   <script src="include.js"></script>
+  <!-- Get Jquery -->
+  <script src="assets/js/jquery.min.js"></script>
+
+  <!-- https://docs.google.com/forms/d/e/1FAIpQLSfFBNqvm6oelcWlz53HFwJUzvAdo6DfdJokGh6cnRIWmW8nOg/formResponse?usp=sf_link -->
+
   <!-- Window title -->
   <title>amylh</title>
 </head>
@@ -16,13 +23,30 @@
   <div w3-include-html="header.html"></div>
 
   <div class="content">
-    <h1>Any Questions?</h1>
-    <p>
-      Message me via GitHub!
-    </p>
-    <p>
-      <img src="https://78.media.tumblr.com/c8b1ce5ddd4aed82d898868243cab6f1/tumblr_mzpjmk9fO11rizk3qo1_500.gif" width=480px>
-    </p>
+    <h1>Contact Me</h1>
+    <center><p>If you would like to reach out to me, please fill out the form below:</p></center>
+
+    <div id="contact-form">
+      <script type="text/javascript">var submitted=false;</script>
+      <script type="text/javascript">
+      $('#gform').on('submit', function(e) {
+        $('#gform *').fadeOut(2000);
+        $('#gform').prepend('Your message has been sent!');
+        });
+      </script>
+      <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfFBNqvm6oelcWlz53HFwJUzvAdo6DfdJokGh6cnRIWmW8nOg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+        Name:*<br>
+        <input type="text" name="entry.1365652512" id="contact-name"><br>
+        Email:*<br>
+        <input type="text" name="entry.1013176839" id="contact-email"><br>
+        Subject:<br>
+        <input type="text" name="entry.1136686958" id="contact-subject"><br>
+        Message:*<br>
+        <textarea type="text" name="entry.823968103" id="contact-message"></textarea><br>
+        <input type="submit" value="Submit" id="contact-submit">
+      </form>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+    </div>
   </div>
 
   <div w3-include-html="footer.html"></div>

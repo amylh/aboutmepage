@@ -10,7 +10,7 @@ body p, li {
   font-size: 20px;
 }
 
-a {
+body a {
   color: seagreen;
   text-decoration: none;
 }
@@ -49,27 +49,72 @@ h1 {
 
 /* Applies to individual <a> elements in the navigation bar */
 #navigation a:link {
-    color: lightseagreen;
-    /* top right bottom left */
-    padding: 5px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+  color: lightseagreen;
+  /* top right bottom left */
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 #navigation a:hover, a:active {
-    background-color: #a9dfbf;
-    text-decoration: none;
-    color: white;
-    display: inline-block;
+  color: lightseagreen;
+  background-color: #a9dfbf;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
 }
 
 #footer {
-    background-color: #eafaf1;
-    text-align: center;
-    margin: 40px 120px 10px 120px;
+  background-color: #eafaf1;
+  text-align: center;
+  margin: 40px 120px 10px 120px;
 }
 #footer p {
-    text-align: center;
+  text-align: center;
+}
+
+#contact-form {
+  min-width: 600px;
+  width: 600px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+input[type=text], textarea {
+  width: 100%;
+  min-width: 400px;
+  padding: 10px 10px 10px 10px; /* Padding is around the text INSIDE the box */
+  margin-bottom: 20px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid #eafaf1;
+  background-color: #eafaf1;
+  color: inherit;
+  vertical-align: top;
+}
+input[type=text]:focus {
+  border: 1px solid lightseagreen;
+}
+#contact-message textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  float: right;
+  background-color: #eafaf1;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #a9dfbf;
+  color: white;
 }
 
 
