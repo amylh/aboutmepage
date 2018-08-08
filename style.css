@@ -96,9 +96,11 @@ input[type=text], textarea {
 input[type=text]:focus, textarea:focus {
   border: 1px solid lightseagreen;
 }
-#contact-message textarea {
+#contact-message {
   height: 150px;
   resize: vertical;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 input[type=submit] {
