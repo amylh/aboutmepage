@@ -3,7 +3,8 @@ body {
   background-color: white;
   color: lightseagreen;
   font-family: 'Raleway', sans-serif;
-  min-width: 600px;
+  min-width: 1000px;
+  text-align: center;
 }
 
 body p, li {
@@ -48,7 +49,7 @@ h1 {
 }
 
 /* Applies to individual <a> elements in the navigation bar */
-#navigation a:link {
+#navigation a:link, a:visited {
   color: lightseagreen;
   /* top right bottom left */
   padding: 5px 25px;
@@ -80,6 +81,7 @@ h1 {
   padding-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  text-align: left;
 }
 input[type=text], textarea {
   width: 100%;
@@ -102,7 +104,6 @@ input[type=text]:focus, textarea:focus {
   font-family: inherit;
   font-size: inherit;
 }
-
 input[type=submit] {
   float: right;
   background-color: #eafaf1;
@@ -130,7 +131,7 @@ input[type=submit]:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 900px;
+  max-width: 900px;
 }
 
 .tile_blurb {
