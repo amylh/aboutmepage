@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <!-- Sources Used: https://github.com/toperkin/staticFormEmails -->
+  <!-- Sources Used:
+    https://github.com/toperkin/staticFormEmails
+    https://api.jquery.com/submit/
+  -->
 
   <!-- Get fonts and CSS -->
   <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
@@ -12,9 +15,7 @@
   <script src="aboutme.js"></script>
   <script src="include.js"></script>
   <!-- Get Jquery -->
-  <!--<script src="assets/js/jquery.min.js"></script>-->
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <!-- https://docs.google.com/forms/d/e/1FAIpQLSfFBNqvm6oelcWlz53HFwJUzvAdo6DfdJokGh6cnRIWmW8nOg/formResponse?usp=sf_link -->
 
   <!-- Window title -->
   <title>amylh</title>
@@ -27,15 +28,39 @@
     <center><p>If you would like to reach out to me, please fill out the form below:</p></center>
 
     <div id="contact-form">
-      <script type="text/javascript">var submitted=false;</script>
       <script type="text/javascript">
-      $('#gform').on('submit', function(e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your message has been sent!');
-        });
+        var submitted=false;
+        function process() {
+          if ($('input:eq(0)').val() === "" || $('input:eq(1)').val() === "" || $('textarea:eq(0)').val() === "") {
+            // If any of the required fields are blank, give a warning
+            $('#contact-error').text('Please fill out the required fields.').show();
+          } else {
+            // Make the form fade out once it's submitted
+            $('#gform *').fadeOut(1000);
+            // Wait until the fadeout is done before showing the "message sent!" blurb
+            $('#gform *').promise().done(function() {
+              $('#contact-blurb').text('Your message has been sent!').show();
+            });
+          }
+        }
+        $('gform').on('submit', process());
+
+        // Reset all the fields when the page is reloaded (but not when you click "submit")
+        function clear_fields() {
+          if (!submitted) {
+            document.getElementById('contact-name').value = "";
+            document.getElementById('contact-email').value = "";
+            document.getElementById('contact-subject').value = "";
+            document.getElementById('contact-message').value = "";
+          }
+        }
       </script>
-      <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfFBNqvm6oelcWlz53HFwJUzvAdo6DfdJokGh6cnRIWmW8nOg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
-        Name:*<br>
+
+      <p id="contact-blurb"></p>
+
+      <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfFBNqvm6oelcWlz53HFwJUzvAdo6DfdJokGh6cnRIWmW8nOg/formResponse?" target="hidden_iframe" onsubmit="submitted=true; process();">
+        <p id="contact-error" style="color:red; font-size:15px;"></p>
+        <div>Name:*<br>
         <input type="text" name="entry.1365652512" id="contact-name"><br>
         Email:*<br>
         <input type="text" name="entry.1013176839" id="contact-email"><br>
@@ -43,9 +68,12 @@
         <input type="text" name="entry.1136686958" id="contact-subject"><br>
         Message:*<br>
         <textarea type="text" name="entry.823968103" id="contact-message"></textarea><br>
-        <input type="submit" value="Submit" id="contact-submit">
+        <input type="submit" value="submit" id="contact-submit"></div>
       </form>
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
+      <!-- To get rid of the redirect that usually appears when you submit a Google form -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="clear_fields()"></iframe>
+
     </div>
   </div>
 

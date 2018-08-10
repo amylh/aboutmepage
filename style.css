@@ -68,7 +68,8 @@ h1 {
 #footer {
   background-color: #eafaf1;
   text-align: center;
-  margin: 40px 120px 10px 120px;
+  margin: 40px 120px 0px 120px;
+  vertical-align: bottom;
 }
 #footer p {
   text-align: center;
@@ -94,6 +95,8 @@ input[type=text], textarea {
   background-color: #eafaf1;
   color: inherit;
   vertical-align: top;
+  font-family: inherit;
+  font-size: inherit;
 }
 input[type=text]:focus, textarea:focus {
   border: 1px solid lightseagreen;
